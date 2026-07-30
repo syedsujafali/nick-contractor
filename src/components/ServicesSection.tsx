@@ -77,22 +77,22 @@ export default function ServicesSection() {
   return (
     <section className="relative w-full py-24 md:py-32 px-4 sm:px-8 bg-ink overflow-hidden border-t border-white/5">
       
-      {/* Desktop-only Colorful Animated Background */}
-      <div className="hidden lg:block absolute inset-0 opacity-40 pointer-events-none mix-blend-screen z-0">
+      {/* Desktop-only Colorful Background */}
+      <div className="hidden lg:block absolute inset-0 opacity-40 pointer-events-none z-0">
         <motion.div 
           animate={{ scale: [1, 1.2, 1], rotate: [0, 90, 0] }}
           transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[30%] -right-[10%] w-[80%] h-[80%] bg-blue-600/20 rounded-full blur-[150px] will-change-transform transform-gpu" 
+          className="absolute top-[-30%] right-[-10%] w-[80%] h-[80%] bg-[radial-gradient(circle,rgba(37,99,235,0.1)_0%,transparent_50%)] will-change-transform transform-gpu" 
         />
         <motion.div 
           animate={{ x: [0, -100, 0], y: [0, 100, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear", delay: 1 }}
-          className="absolute bottom-[0%] left-[0%] w-[60%] h-[70%] bg-emerald-500/15 rounded-full blur-[150px] will-change-transform transform-gpu" 
+          className="absolute bottom-[0%] left-[0%] w-[60%] h-[70%] bg-[radial-gradient(circle,rgba(16,185,129,0.1)_0%,transparent_50%)] will-change-transform transform-gpu" 
         />
         <motion.div 
           animate={{ x: [0, 50, 0], y: [0, 50, 0], scale: [1, 1.1, 1] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear", delay: 3 }}
-          className="absolute top-[20%] left-[30%] w-[50%] h-[50%] bg-neon-purple/15 rounded-full blur-[140px] will-change-transform transform-gpu" 
+          className="absolute top-[20%] left-[30%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(168,85,247,0.1)_0%,transparent_50%)] will-change-transform transform-gpu" 
         />
       </div>
 

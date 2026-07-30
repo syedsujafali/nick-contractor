@@ -6,16 +6,16 @@ export default function Footer() {
   return (
     <footer className="relative w-full bg-[#040406] px-4 py-16 sm:px-8 overflow-hidden border-t border-white/5">
       {/* Desktop-only Colorful Animated Background */}
-      <div className="hidden lg:block absolute inset-0 opacity-50 pointer-events-none mix-blend-screen z-0">
+      <div className="hidden lg:block absolute inset-0 opacity-50 pointer-events-none z-0">
         <motion.div 
           animate={{ scale: [1, 1.1, 1], x: [0, 50, 0] }}
           transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[50%] left-[20%] w-[40%] h-[150%] bg-neon-purple/20 rounded-full blur-[120px] will-change-transform transform-gpu" 
+          className="absolute -top-[50%] left-[20%] w-[40%] h-[150%] bg-[radial-gradient(circle,rgba(168,85,247,0.1)_0%,transparent_50%)] will-change-transform transform-gpu" 
         />
         <motion.div 
           animate={{ x: [0, -50, 0], y: [0, 20, 0] }}
           transition={{ duration: 18, repeat: Infinity, ease: "linear", delay: 2 }}
-          className="absolute top-[10%] right-[10%] w-[30%] h-[100%] bg-amber-500/15 rounded-full blur-[120px] will-change-transform transform-gpu" 
+          className="absolute top-[10%] right-[10%] w-[30%] h-[100%] bg-[radial-gradient(circle,rgba(245,158,11,0.1)_0%,transparent_50%)] will-change-transform transform-gpu" 
         />
       </div>
 

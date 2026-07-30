@@ -25,21 +25,21 @@ export default function AboutSection() {
     <section className="relative w-full py-24 px-4 sm:px-6 lg:px-8 bg-[#040406] overflow-hidden">
 
       {/* Desktop-only Colorful Background */}
-      <div className="hidden lg:block absolute inset-0 opacity-60 pointer-events-none mix-blend-screen z-0">
+      <div className="hidden lg:block absolute inset-0 opacity-60 pointer-events-none z-0">
         <motion.div
           animate={{ x: [0, 50, 0], y: [0, -50, 0] }}
           transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute -top-[20%] -left-[10%] w-[70%] h-[70%] bg-neon-purple/30 rounded-full blur-[150px] will-change-transform transform-gpu"
+          className="absolute top-[10%] left-[20%] w-[50%] h-[50%] bg-[radial-gradient(circle,rgba(6,182,212,0.1)_0%,transparent_50%)] will-change-transform transform-gpu"
         />
         <motion.div
           animate={{ x: [0, -50, 0], y: [0, 50, 0] }}
           transition={{ duration: 25, repeat: Infinity, ease: "linear", delay: 2 }}
-          className="absolute top-[20%] right-[0%] w-[50%] h-[80%] bg-neon-cyan/20 rounded-full blur-[150px] will-change-transform transform-gpu"
+          className="absolute top-[20%] right-[0%] w-[50%] h-[80%] bg-[radial-gradient(circle,rgba(168,85,247,0.1)_0%,transparent_50%)] will-change-transform transform-gpu"
         />
         <motion.div
           animate={{ x: [0, 30, 0], y: [0, 30, 0] }}
           transition={{ duration: 22, repeat: Infinity, ease: "linear", delay: 4 }}
-          className="absolute -bottom-[20%] left-[20%] w-[60%] h-[60%] bg-amber-500/10 rounded-full blur-[150px] will-change-transform transform-gpu"
+          className="absolute bottom-[10%] right-[10%] w-[60%] h-[60%] bg-[radial-gradient(circle,rgba(245,158,11,0.1)_0%,transparent_50%)] will-change-transform transform-gpu"
         />
       </div>
 
