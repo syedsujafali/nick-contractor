@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Notearoff Roofing — Design Tokens (Tailwind v4 @theme)
+   ============================================================ */
+@theme {
+  /* Primary Neon Colors (Blue, Red, Yellow) */
+  --color-neon-cyan: #0066ff; /* Electric Blue */
+  --color-neon-pink: #ff0033; /* Neon Red */
+  --color-neon-purple: #ffcc00; /* Glowing Yellow */
+  --color-neon-green: #ffee00; /* Lemon Yellow */
+  --color-brand-blue: #09090b;
+  --color-brand-blue-deep: #000;
+  --color-gold: var(--color-neon-cyan);
+  --color-gold-soft: #a5f3fc;
+  --color-ink: #050505;
+  --color-offwhite: #ffffff;
+  --color-lightgray: #a1a1aa;
+  --color-textgray: #71717a;
+
+  /* Typography */
+  --font-display: "Syne", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+
+  /* Easing */
+  --ease-lux: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Animations */
+  --animate-float-slow: float-slow 9s ease-in-out infinite;
+  --animate-float-slower: float-slow 14s ease-in-out infinite;
+  --animate-shimmer: shimmer 3.5s linear infinite;
+  --animate-spin-slow: spin 26s linear infinite;
+  --animate-pulse-soft: pulse-soft 4s ease-in-out infinite;
+}
+
+@keyframes float-slow {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(0, -26px, 0);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% center;
+  }
+  100% {
+    background-position: 200% center;
+  }
+}
+
+@keyframes pulse-soft {
+  0%,
+  100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+/* ============================================================
+   Base layer
+   ============================================================ */
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-ink);
+    color: var(--color-offwhite);
+    font-family: var(--font-sans);
+    overflow-x: hidden;
+  }
+
+  /* Selection */
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-ink);
+  }
+
+  /* Premium slim scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #050505;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--color-brand-blue), var(--color-ink));
+    border-radius: 999px;
+    border: 2px solid #050505;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: var(--color-gold);
+  }
+
+  /* Accessible focus ring */
+  :focus-visible {
+    outline: 2px solid var(--color-gold);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  /* Lenis smooth scroll recommended styles */
+  html.lenis,
+  html.lenis body {
+    height: auto;
+  }
+  .lenis.lenis-smooth {
+    scroll-behavior: auto !important;
+  }
+  .lenis.lenis-smooth [data-lenis-prevent] {
+    overscroll-behavior: contain;
+  }
+  .lenis.lenis-stopped {
+    overflow: hidden;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
+
+/* ============================================================
+   Reusable utilities
+   ============================================================ */
+@layer utilities {
+  /* Neon text utility */
+  .text-neon-cyan {
+    color: var(--color-neon-cyan);
+    text-shadow: 0 0 8px rgba(0, 102, 255, 0.3);
+  }
+
+  .text-neon-pink {
+    color: var(--color-neon-pink);
+    text-shadow: 0 0 8px rgba(255, 0, 51, 0.3);
+  }
+
+  /* Light metallic for off-white logo text */
+  .text-platinum {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255,255,255,0.4);
+  }
+
+  /* Glassmorphism */
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px) saturate(140%);
+    -webkit-backdrop-filter: blur(16px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-dark {
+    background: rgba(13, 13, 13, 0.55);
+    backdrop-filter: blur(18px) saturate(140%);
+    -webkit-backdrop-filter: blur(18px) saturate(140%);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  /* Hide scrollbar utility for inner scroll areas */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
