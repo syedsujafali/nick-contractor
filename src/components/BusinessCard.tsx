@@ -97,9 +97,9 @@ export default function BusinessCard() {
           <motion.div variants={tileVariants} className="flex-[1.2] p-4 lg:p-6 flex flex-col justify-center transition-colors duration-500 hover:bg-white/[0.02] group/tile relative will-change-transform transform-gpu">
             {/* Top-Right Badge Image inside the tile */}
             <motion.img
-              src="/badge.png"
-              alt="30 Years of Experience"
-              className="absolute top-6 right-6 w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] z-20 pointer-events-none"
+              src="/new_badge.png"
+              alt="30+ Years of Experience"
+              className="absolute top-6 right-6 w-24 h-24 sm:w-32 sm:h-32 object-contain drop-shadow-[0_10px_20px_rgba(0,0,0,0.5)] z-20 pointer-events-none mix-blend-screen"
               initial={{ opacity: 0, scale: 0.8, rotate: 10 }}
               animate={{ opacity: 1, scale: 1, rotate: 0 }}
               transition={{ type: "spring", delay: 0.6 }}
@@ -224,10 +224,10 @@ export default function BusinessCard() {
                     <div className="absolute inset-0 bg-black/40 group-hover/srv:bg-black/20 transition-colors duration-500 pointer-events-none" />
 
                     <div className="flex flex-col sm:flex-row items-center sm:items-start gap-2 sm:gap-3 relative z-10 text-center sm:text-left">
-                      <div className="relative flex h-8 w-8 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-lg sm:rounded-2xl bg-black/30 border border-white/30 shadow-[inset_0_1px_8px_rgba(255,255,255,0.3)] overflow-hidden group-hover/srv:border-white/60 transition-all duration-500 group-hover/srv:shadow-[0_0_20px_rgba(255,255,255,0.5)]">
-                        <s.icon className="relative z-10 h-4 w-4 sm:h-5 sm:w-5 text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)] group-hover/srv:scale-125 group-hover/srv:rotate-12 transition-transform duration-500 ease-out" />
+                      <div className="relative flex h-6 w-6 sm:h-12 sm:w-12 shrink-0 items-center justify-center rounded-md sm:rounded-2xl bg-black/30 border border-white/30 shadow-[inset_0_1px_8px_rgba(255,255,255,0.3)] overflow-hidden group-hover/srv:border-white/60 transition-all duration-500 group-hover/srv:shadow-[0_0_20px_rgba(255,255,255,0.5)]">
+                        <s.icon className="relative z-10 h-3 w-3 sm:h-5 sm:w-5 text-white drop-shadow-[0_0_15px_rgba(255,255,255,1)] group-hover/srv:scale-125 group-hover/srv:rotate-12 transition-transform duration-500 ease-out" />
                       </div>
-                      <h3 className="font-sans sm:font-display text-[10px] sm:text-base font-bold sm:font-black text-white tracking-normal sm:tracking-wide transition-all duration-300 leading-tight drop-shadow-md group-hover/srv:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">{s.title}</h3>
+                      <h3 className="font-sans sm:font-display text-[17px] sm:text-base font-bold sm:font-black text-white tracking-normal sm:tracking-wide transition-all duration-300 leading-tight drop-shadow-md group-hover/srv:drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">{s.title}</h3>
                     </div>
 
                     <p className="hidden sm:block relative z-10 text-[11px] sm:text-[12px] leading-snug text-white/90 font-medium group-hover/srv:text-white transition-colors duration-300 drop-shadow-sm">
@@ -252,10 +252,10 @@ export default function BusinessCard() {
                       key={b.label}
                       className="flex flex-col justify-center text-center p-3 sm:p-4 rounded-2xl bg-gradient-to-b from-white/[0.04] to-white/[0.01] border border-white/10 transition-all duration-300 hover:bg-white/[0.08] hover:border-white/30 hover:-translate-y-1 hover:shadow-[0_10px_20px_rgba(0,0,0,0.3)] backdrop-blur-sm"
                     >
-                      <div className={`font-sans sm:font-display text-[11px] sm:text-[15px] xl:text-[16px] leading-tight font-extrabold sm:font-black tracking-normal sm:tracking-wide mb-0 sm:mb-1.5 ${i % 2 === 0 ? 'text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-600 drop-shadow-[0_0_10px_rgba(251,191,36,0.4)]' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-600 drop-shadow-[0_0_10px_rgba(96,165,250,0.4)]'}`}>
+                      <div className={`font-sans sm:font-display text-[20px] sm:text-[15px] xl:text-[16px] leading-tight font-extrabold sm:font-black tracking-normal sm:tracking-wide mb-0 sm:mb-1.5 ${i % 2 === 0 ? 'text-transparent bg-clip-text bg-gradient-to-r from-amber-400 to-yellow-600 drop-shadow-[0_0_10px_rgba(251,191,36,0.4)]' : 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-600 drop-shadow-[0_0_10px_rgba(96,165,250,0.4)]'}`}>
                         {b.value}
                       </div>
-                      <div className="hidden sm:block text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.1em] text-white/70 group-hover/stats:text-white/90 transition-colors duration-300 leading-snug">
+                      <div className="hidden sm:block text-[10px] font-bold uppercase tracking-[0.1em] text-white/70 group-hover/stats:text-white/90 transition-colors duration-300 leading-snug">
                         {b.label}
                       </div>
                     </div>
@@ -277,8 +277,9 @@ export default function BusinessCard() {
                     <FiMapPin className="h-4 w-4" />
                   </div>
                   <div className="flex flex-col text-center sm:text-left">
-                    <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mb-1 drop-shadow-[0_0_5px_rgba(251,191,36,0.5)]">Headquarters</span>
-                    <span className="text-[12px] font-medium text-white/90 leading-snug group-hover/loc:text-white transition-colors">{COMPANY.address}</span>
+                    <span className="text-[10px] font-black uppercase tracking-widest text-amber-500 mb-1 drop-shadow-[0_0_5px_rgba(251,191,36,0.5)]">Local Experts</span>
+                    <span className="text-[14px] font-bold text-white leading-snug group-hover/loc:text-amber-400 transition-colors">Hawthorne, NJ</span>
+                    <span className="text-[10px] sm:text-[11px] font-medium text-white/50 mt-1">Your trusted local flat roof repair and restoration specialists.</span>
                   </div>
                 </a>
 
