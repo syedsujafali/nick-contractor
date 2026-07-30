@@ -13,8 +13,8 @@ import {
 export const COMPANY = {
   name: "Nick Contractor",
   tagline: "FLAT ROOF REPAIR", // From Image 1
-  phone: "(555) 123-4567",
-  phoneHref: "tel:+15551234567",
+  phone: "(973) 207-0689",
+  phoneHref: "tel:+19732070689",
   email: "nickcontractorllc@gmail.com",
   emailHref: "mailto:nickcontractorllc@gmail.com",
   address: "525 Lafayette Ave, Hawthorne, NJ 07506",
